@@ -53,7 +53,7 @@
         //Apagar todos os elementos
         frutas.Clear();
         Console.WriteLine();
-       
+
 
         //criando um dicionario de dados
 
@@ -68,6 +68,65 @@
         foreach (var carro in carros)
         {
             Console.WriteLine($"{carro.Key} - {carro.Value}");
+
+
         }
+        //trabalhando com fila
+        //criar uma fila (queue)
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine();
+
+        Queue<string> filaBranco = new Queue<string>();
+
+        //adicionar elementos em uma fila
+
+        filaBranco.Enqueue("André Balada");
+        filaBranco.Enqueue("Adriano Imperardor");
+        filaBranco.Enqueue("Mario Balotelli");
+        filaBranco.Enqueue("Beckham");
+
+        filaBranco.Dequeue();
+        foreach (var pessoa in filaBranco)
+        {
+            Console.WriteLine(pessoa);
+        }
+
+        //verificar se existe um elemento na fila
+
+        bool achou = filaBranco.Contains("André Balada");
+
+        if (achou == true)
+        {
+            Console.WriteLine("A pessoa está na fila");
+        }
+        else
+        {
+            Console.WriteLine("A pessoa não está na fila");
+        }
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine();
+
+        //trabalhando com pilha(STACK)
+        Stack<string> livros = new Stack<string>();
+
+        //adicionar elementos na pilha
+        livros.Push("Chapeuzinho Vermelho");
+        livros.Push("Branca de Neve");
+        livros.Push("A princesa e o Sapo");
+
+        foreach (var livro in livros)
+        {
+            Console.WriteLine(livro);
+        }
+        Console.WriteLine();
+        Console.WriteLine();
+        livros.Pop();
+        foreach (var livro in livros) 
+        {
+            Console.WriteLine(livro);
+            }
+
     }
 }
