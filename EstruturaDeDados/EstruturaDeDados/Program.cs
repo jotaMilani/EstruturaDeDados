@@ -13,10 +13,8 @@
 
         //imprimir os itens da lista
         Console.WriteLine("Minha lista de frutas:");
-        foreach (string fruta in frutas)
-        {
-            Console.WriteLine(fruta);
-        }
+        frutas.ForEach(Console.WriteLine);
+
         Console.WriteLine(); // pula linha em branco
 
         //imprimir elemento na posição específica
@@ -29,19 +27,15 @@
         Console.WriteLine();
 
         Console.WriteLine("Minha lista de frutas: ");
-        foreach (string fruta in frutas)
-        {
-            Console.WriteLine(fruta);
-        }
+        frutas.ForEach(Console.WriteLine);
+
         //alterar um elemento no indice especifico
         frutas[4] = "Pêra";
         Console.WriteLine();
 
         Console.WriteLine("Minha lista de frutas: ");
-        foreach (string fruta in frutas)
-        {
-            Console.WriteLine(fruta);
-        }
+        frutas.ForEach(Console.WriteLine);
+
         //remover elementos da lista no indice especifico
 
         frutas.RemoveAt(3);
@@ -53,16 +47,27 @@
         Console.WriteLine();
 
         Console.WriteLine("Minha lista de frutas: ");
-        foreach (string fruta in frutas)
-        {
-            Console.WriteLine(fruta);
-        }
+        frutas.ForEach(Console.WriteLine);
+
 
         //Apagar todos os elementos
         frutas.Clear();
         Console.WriteLine();
-        Console.WriteLine("Teste");
+       
 
-        frutas.ForEach(Console.WriteLine);
+        //criando um dicionario de dados
+
+        Dictionary<int, string> carros = new Dictionary<int, string>();
+        //Adicionar Dados a um dicionario 
+        carros.Add(5, "Corsa");
+        carros.Add(10, "Fusca");
+        carros.Add(2, "Ford Ka");
+
+        //Imprimindo um diconario de dados
+
+        foreach (var carro in carros)
+        {
+            Console.WriteLine($"{carro.Key} - {carro.Value}");
+        }
     }
 }
